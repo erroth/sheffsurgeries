@@ -6,7 +6,7 @@ class BootStrap {
 
 def Tom = new Doctor (
 
-doctorName: 'Tom Handley',
+doctorName: 'Dr Tom Handley',
 qualifications: 'PHD',
 position: 'GP',
 doctorEmail: 'thomas.handley@hotmail.com',
@@ -16,16 +16,16 @@ doctorPhone: '07530599239',
 bio: 'yeet'
 ).save()
 
-def Ben = new Doctor (
+def Sarah = new Doctor (
 
-doctorName: 'Ben Kata',
-qualifications: 'PHD',
-position: 'GP',
-doctorEmail: 'benben3@hotmail.com',
-password: 'abc123',
-doctorOffice: '9152',
-doctorPhone: '07530599238',
-bio: 'Doctor who likes helping people'
+doctorName: 'Dr Sarah Macdonald',
+qualifications: 'MBChB(Sheffield)',
+position: 'GP, Surgeon',
+doctorEmail: 's.macdonald@myemail.com',
+password: 'secret222',
+doctorOffice: 'D-9888',
+doctorPhone: '01111777',
+bio: 'Placehold text'
 ).save()
 
 def Appointment1 = new Appointment (
@@ -38,19 +38,19 @@ roomNumber: '9151'
 
 def Appointment2 = new Appointment (
 
-appDate: new Date('28/03/2019'),
-appTime: '3:30pm',
+appDate: new Date('11/04/2019'),
+appTime: '3:00pm',
 appDuration: '30 Minutes',
-roomNumber: '9152'
+roomNumber: 'D-9888'
 ).save()
 
-def Karen = new Nurse (
+def Susan = new Nurse (
 
-nurseName: 'Karen',
-qualifications: 'BAHons',
-nurseEmail: 'karen123@gmail.com',
-nurseOffice: '9140',
-nursePhone: '07445978512'
+nurseName: 'Susan Peters',
+qualifications: 'Registered General Nurse',
+nurseEmail: 's.peters@myemail.com',
+nurseOffice: 'B-455',
+nursePhone: '0114 222 4433'
 ).save()
 
 def Janet = new Nurse (
@@ -73,15 +73,15 @@ dateRegistered: new Date('27/02/2019'),
 patientPhone: '07585898656'
 ).save()
 
-def Gemma = new Patient (
+def Tom2 = new Patient (
 
-patientName: 'Gemma Buckland',
-patientAddress: '3 Forest Ridge',
-patientResidence: 'Room 3',
-patientDob: new Date('25/11/1998'),
-patientID: '78GB87',
-dateRegistered: new Date('27/02/2019'),
-patientPhone: '07587898656'
+patientName: 'Tom Rivers',
+patientAddress: '2 One Way Street, Eckington',
+patientResidence: 'Sheffield, Barnsley, Doncaster',
+patientDob: new Date('20/09/1988'),
+patientID: 'E25555',
+dateRegistered: new Date('26/02/2018'),
+patientPhone: '0114 222 4444'
 ).save()
 
 def East = new Surgery (
