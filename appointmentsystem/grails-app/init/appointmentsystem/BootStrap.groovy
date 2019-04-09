@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-def Tom = new Doctor (
+/*def Tom = new Doctor (
 
 doctorName: 'Dr Tom Handley',
 qualifications: 'PHD',
@@ -179,7 +179,7 @@ Leah.addToDoctor(Tom)
 Tom2.addToSurgery(City)
 Leah.addToSurgery(East)
 
-/*Susan.addToDoctors(Sarah)
+Susan.addToDoctors(Sarah)
 Janet.addToDoctors(Tom)*/
 
     }
