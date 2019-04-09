@@ -156,16 +156,16 @@ City.addToReceptionists(Rob)
 East.addToReceptionists(Alice)
 City.addToDoctors(Sarah)
 East.addToDoctors(Tom)
-/*City.addToNurses(Janet)
+City.addToNurses(Janet)
 East.addToNurses(Susan)
 City.addToAppointments(Appointment1)
 East.addToAppointments(Appointment2)
 City.addToPatients(Tom2)
-East.addToPatients(Leah)*/
+East.addToPatients(Leah)
 
 Sarah.addToPrescriptions(Prescription1)
 Tom.addToPrescriptions(Prescription2)
-/*Sarah.addToAppointments(Appointment1)
+Sarah.addToAppointments(Appointment1)
 Tom.addToAppointments(Appointment2)
 Sarah.addToNurses(Susan)
 Tom.addToNurses(Janet)
@@ -179,7 +179,7 @@ Leah.addToDoctor(Tom)
 Tom2.addToSurgery(City)
 Leah.addToSurgery(East)
 
-Susan.addToDoctors(Sarah)
+/*Susan.addToDoctors(Sarah)
 Janet.addToDoctors(Tom)*/
 
     }
