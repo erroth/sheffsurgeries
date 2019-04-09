@@ -99,15 +99,15 @@ environments:
     development:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/development
+            url: jdbc:mysql://localhost:3306/appointmentsystem
     test:
         dataSource:
             dbCreate: update
-            url: jdbc:mysql://localhost:3306/test
+            url: 
     production:
         dataSource:
-            dbCreate: none
-            url: jdbc:mysql://localhost:3306/production
+            dbCreate: update
+            url: 
             properties:
                 jmxEnabled: true
                 initialSize: 5
