@@ -28,21 +28,7 @@ doctorPhone: '01111777',
 bio: 'Placehold text'
 ).save()
 
-def Appointment1 = new Appointment (
 
-appDate: new Date('03/03/2019'),
-appTime: '2:30pm',
-appDuration: '30 Minutes',
-roomNumber: '9151'
-).save()
-
-def Appointment2 = new Appointment (
-
-appDate: new Date('11/04/2019'),
-appTime: '3:00pm',
-appDuration: '30 Minutes',
-roomNumber: 'D-9888'
-).save()
 
 def Susan = new Nurse (
 
@@ -50,7 +36,8 @@ nurseName: 'Susan Peters',
 qualifications: 'Registered General Nurse',
 nurseEmail: 's.peters@myemail.com',
 nurseOffice: 'B-455',
-nursePhone: '0114 222 4433'
+nursePhone: '0114 222 4433',
+doctors: Sarah
 ).save()
 
 def Janet = new Nurse (
@@ -59,7 +46,8 @@ nurseName: 'Janet',
 qualifications: 'BAHons',
 nurseEmail: 'janet123@gmail.com',
 nurseOffice: '9141',
-nursePhone: '07642579854'
+nursePhone: '07642579854',
+doctors: Tom
 ).save()
 
 def Leah = new Patient (
@@ -71,6 +59,7 @@ patientDob: new Date('10/09/1998'),
 patientID: '78LH87',
 dateRegistered: new Date('27/02/2019'),
 patientPhone: '07585898656'
+
 ).save()
 
 def Tom2 = new Patient (
@@ -82,6 +71,25 @@ patientDob: new Date('20/09/1988'),
 patientID: 'E25555',
 dateRegistered: new Date('26/02/2018'),
 patientPhone: '0114 222 4444'
+
+).save()
+
+def Appointment1 = new Appointment (
+
+appDate: new Date('03/03/2019'),
+appTime: '2:30pm',
+appDuration: '30 Minutes',
+roomNumber: '9151',
+thepatient: Leah
+).save()
+
+def Appointment2 = new Appointment (
+
+appDate: new Date('11/04/2019'),
+appTime: '3:00pm',
+appDuration: '30 Minutes',
+roomNumber: 'D-9888',
+thepatient: Tom2
 ).save()
 
 def East = new Surgery (
@@ -143,6 +151,36 @@ totalCost: '£4.20',
 dateIssued: new Date ('20/04/2019'),
 patientPaying: 'Yes'
 ).save()
+
+City.addToReceptionists(Rob)
+East.addToReceptionists(Alice)
+City.addToDoctors(Sarah)
+East.addToDoctors(Tom)
+/*City.addToNurses(Janet)
+East.addToNurses(Susan)
+City.addToAppointments(Appointment1)
+East.addToAppointments(Appointment2)
+City.addToPatients(Tom2)
+East.addToPatients(Leah)*/
+
+Sarah.addToPrescriptions(Prescription1)
+Tom.addToPrescriptions(Prescription2)
+/*Sarah.addToAppointments(Appointment1)
+Tom.addToAppointments(Appointment2)
+Sarah.addToNurses(Susan)
+Tom.addToNurses(Janet)
+Sarah.addToPatients(Tom2)
+Tom.addToPatients(Leah)
+
+Tom2.addToPrescriptions(Prescription1)
+Leah.addToPrescriptions(Prescription2)
+Tom2.addToDoctor(Sarah)
+Leah.addToDoctor(Tom)
+Tom2.addToSurgery(City)
+Leah.addToSurgery(East)
+
+Susan.addToDoctors(Sarah)
+Janet.addToDoctors(Tom)*/
 
     }
     def destroy = {
